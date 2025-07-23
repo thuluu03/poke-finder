@@ -1,5 +1,6 @@
 import {React, useState, useEffect} from "react";
 import Pokemon from "./pokemon";
+import "./style.css";
 
 const Gallery = ({filteredData}) => {
     return (
@@ -8,6 +9,7 @@ const Gallery = ({filteredData}) => {
             {filteredData.map((pokemon, index) => (
                     <Pokemon
                         key={index}
+                        id={pokemon.id}
                         image={pokemon.image}
                         name={pokemon.name}
                         type1={pokemon.type1}
